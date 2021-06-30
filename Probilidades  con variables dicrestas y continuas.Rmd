@@ -1,0 +1,141 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+dbinom(1,8,0.02)+dbinom(2,8,0.02)+dbinom(3,8,0.02)+dbinom(4,8,0.02)+dbinom(5,8,0.02)+dbinom(6,8,0.02)+dbinom(7,8,0.02)+dbinom(8,8,0.02)
+
+```
+```{r}
+dbinom(4,8,0.02)
+```
+```{r}
+x<-1
+h<-0
+n<-8
+while (n!=0) {
+  j<-dbinom(x,8,0.02)
+  x<-x+1
+  h<-h+j
+  n<-n-1
+} 
+h
+
+```
+```{r}
+dbinom(1000000,1000000,0.91)
+```
+```{r}
+n<-0
+x<-15
+while (x>=3) {
+  j<-dbinom(x,15,0.23)
+  print(j)
+  n<-n+j
+  x<-x-1
+}
+n
+```
+```{r}
+dbinom(2,5,0.2)
+```
+```{r}
+#distibucion gemonetrica
+dgeom(1,0.04)
+```
+```{r}
+n<-0
+x<-1
+while (x<=5) {
+  j<-dgeom(x,0.04)
+  print(j)
+  x<-x+1
+  n<-n+j
+}
+n
+
+```
+
+```{r}
+#DISTRIBUCION DE POISSON
+1-dpois(0,1)-dpois(1,1)
+
+```
+```{r}
+h<-0
+x<-35
+while (x<=40){
+  j<-dpois(x,40)
+  print(j)
+  x<-x+1
+  h=h+j
+}
+h
+```
+```{r}
+dgeom(5,0.011)
+```
+```{r}
+dpois(2,5)
+dpois(0,7)+dpois(1,3)+dpois(2,3)
+```
+```{r}
+
+u<-1-h
+u
+```
+
+```{r}
+#LOS MINUTOS QUE TARDAN EN LLEGAR A LA UNIVERSIDAD UN GRUPO DE ESTUDIANTES
+#SIGUE UNA DISTRIBUCION NORMAL, CON  MEDIA DE 40 MINUTOS.
+# Y UNA DESVIACION ESTANDAR DE DE 11 MINUTOS
+# QUE PORCENTAJE DE ESTUDIANTES SE TARDA EN LLEGAR :
+#MENOS DE 25 MINUTOS?
+
+
+#ENTRE 30 Y 50 MINUTOS?
+
+
+
+```
+
+```{r}
+pnorm(40,38,4)
+```
+
+```{r}
+pexp(40,1/20)-pexp(5,1/20)
+```
+```{r}
+1-pexp(7,1/5)
+```
+
+```{r}
+h<-0
+x<-0
+while (x<=29){
+  j<-dexp(x,0.2)
+  print(j)
+  x<-x+1
+  h=h+j
+}
+```
+
+```{r}
+pex
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
